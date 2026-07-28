@@ -314,3 +314,40 @@
     .hero h1{font-size:38px;}
     section{padding:80px 0;}
   }
+
+  /* GALLERY GRID (multiple image placeholders) */
+  .gallery-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:2px;
+    height:100%;min-height:340px;
+  }
+  .gallery-grid .placeholder-tag{border:1px solid var(--line);background:var(--ink-soft);}
+
+  /* STAY META (check-in / check-out / min stay row) */
+  .stay-meta{
+    display:flex;gap:20px;flex-wrap:wrap;margin:20px 0;
+    font-size:13px;color:var(--limestone);opacity:0.8;
+  }
+  .stay-meta span{
+    padding:6px 12px;border:1px solid var(--line);border-radius:20px;
+  }
+
+  /* POLICY SECTION (house rules + cancellation policy) */
+  #policy{border-top:1px solid var(--line);}
+  .policy-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:48px;
+  }
+  .policy-block h3{
+    font-family:'Fraunces',serif;font-size:20px;font-weight:500;
+    color:var(--papyrus);margin-bottom:20px;
+  }
+  .policy-list{list-style:none;padding:0;margin:0;}
+  .policy-list li{
+    font-size:13.5px;color:var(--limestone);opacity:0.8;
+    padding:12px 0;border-top:1px solid var(--line);line-height:1.5;
+  }
+  .policy-list li:first-child{border-top:none;}
+
+  @media (max-width: 880px){
+    .gallery-grid{grid-template-columns:1fr;}
+    .policy-grid{grid-template-columns:1fr;gap:32px;}
+  }
